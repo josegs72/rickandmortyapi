@@ -10,9 +10,12 @@ h1 {
 }
 
 .character {
-  margin: 30px;
+  margin: 60px;
   width: 200px;
   height: 200px;
+  align-items: center;
+  box-shadow: 5px 5px 12px 5px #000000;
+  border-radius: 40px 40px 0px 0px;
 }
 
 .image {
@@ -21,15 +24,23 @@ h1 {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  border-radius: 0px 0px 40px 40px;
 }
 
 .name {
   border-radius: 40px 40px 0px 0px;
+  margin: 0px;
   background-color: rgb(56, 196, 98);
   text-align: center;
   padding: 10px;
 }
 
-h3 {
-  box-shadow: 5px 5px 12px 5px #000000;
+.species {
+  text-align: center;
+  height: 10%;
+}
+
+p {
+  background-color: rgb(56, 196, 98);
+  margin: 0px;
 }/*# sourceMappingURL=style.css.map */
