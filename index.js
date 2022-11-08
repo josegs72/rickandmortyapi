@@ -5,9 +5,33 @@ const input$$ = document.querySelector("input");
 const buscar = (event) => {
     event.preventDefault();
    console.log(input$$.value);
-    
-    console.log('buscar', event.target);
-}
+   console.log('buscar', event.target);
+    const url = `https://rickandmortyapi.com/api/character/?name=${input$$.value}`;
+    fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data);
+        book$$.innerHTML = "";
+        data.results.forEach((personaje) => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+           card.innerHTML = `
+           <img src="${personaje.image}" alt="${personaje.name}" />
+            <div class="card__info">
+                <h3>${personaje.name}</h3>
+                <p>${personaje.species}</p>
+            </div>
+           
+          `;
+            book$$.appendChild(card);
+        });
+    });
+};
+
+
+
+
+formulario$$.addEventListener("submit", buscar);
 
 
 const pers = (characters) => {
@@ -50,4 +74,19 @@ const pers = (characters) => {
 fetch("https://rickandmortyapi.com/api/character/1,2,3,4,5,7,8,9,10,11,12,13,14,15,16,17,18,21,22,23").then((response) => response.json()).then((characters)=>
 pers(characters));
 
-formulario$$.addEventListener("submit", buscar);
+
+//FORMULARIO//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
