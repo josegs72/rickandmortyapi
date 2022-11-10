@@ -19,8 +19,9 @@ const buscar = (event) => {
         card.classList.add("card");
         card.innerHTML = `
         <div class="character">
-        <h3 class="name">${personaje.name}</h3>
-        <p class="species">${personaje.species}</p>
+        <h3 class="name1">${personaje.name}</h3>
+        <p class="species1">${personaje.species}</p>
+        <p class="status1">${personaje.status}</p>
         <img class = "image" src="${personaje.image}" alt="${personaje.name}" />
     </div>
        

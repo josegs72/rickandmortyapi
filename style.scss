@@ -37,11 +37,16 @@ h1 {
   margin: 0px;
   background-color: rgb(56, 196, 98);
   text-align: center;
+  font-family: Comic Sans MS;
+  
   padding: 10px;
+
 }
 
 .species {
   text-align: center;
+  padding: 10px;
+  font-family: Comic Sans MS;
 
   height: 10%;
 }
@@ -59,6 +64,7 @@ div.container {
   padding: 0px;
 }
 
+
 form.formulario {
   display: flex;
   flex-wrap: wrap;
@@ -70,4 +76,33 @@ form.formulario {
 
 img.logo {
   border-radius: 30px 30px 30px 30px;
+} 
+h3.name1 {
+  border-radius: 40px 40px 0px 0px;
+  margin: 0px;
+  background-color:  rgb(196, 56, 77);
+  text-align: center;
+  padding: 10px;
+  font-family: Comic Sans MS;
 }
+p.species1{
+  text-align: center;
+  height: 10%;
+  background-color: rgb(196, 56, 77);
+  margin: 0px;
+ font-family: Comic Sans MS;
+ 
+  
+}
+p.status1{
+  text-align: center;
+  height: 10%;
+  background-color: rgb(196, 56, 77);
+  margin: 0px;
+ font-family: Comic Sans MS;
+ padding-bottom: 7px;
+  
+}
+
+
+
