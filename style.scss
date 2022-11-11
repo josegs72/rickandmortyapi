@@ -20,8 +20,8 @@ h1 {
   width: 200px;
   height: 200px;
   align-items: center;
-  -webkit-box-shadow: 5px 5px 12px 5px #000000;
-  box-shadow: 5px 5px 12px 5px #000000;
+  -webkit-box-shadow: 5px 5px 12px 5px #ac1e1e;
+  box-shadow: 5px 5px 12px 5px #a3de0c;
   border-radius: 40px 40px 0px 0px;
 }
 .image {
@@ -40,8 +40,8 @@ h1 {
   text-align: center;
   font-family: Comic Sans MS;
   
-  padding: 10px;
-  padding-bottom: 20px;
+  padding: 20px;
+  padding-bottom: 25px;
 
 }
 
@@ -72,8 +72,9 @@ form.formulario {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  gap: 10px;
   padding: 0px;
+  
 }
 
 img.logo {
@@ -99,12 +100,61 @@ p.species1{
 p.status1{
   text-align: center;
   height: 10%;
-  background-color: rgb(196, 56, 77);
+  background-color: rgba(196, 56, 77);
   margin: 0px;
  font-family: Comic Sans MS;
  padding-bottom: 7px;
   
 }
+input[type="button"] {
 
+  text-decoration: none;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: helvetica;
+  font-weight: 300;
+  font-size: 25px;
+  font-style: italic;
+  
+  background-color: rgb(43, 80, 50);
+  color: hwb(339 5% 13%);
+  border-radius: 15px;
+  border: 3px double #0a0f0a;
+  margin-left: 0%;
+  }
+input[type="button"]:hover {
+ 
+  color: rgb(90, 236, 116);
+  background-color: hwb(339 5% 13%);
+  border: 3px double #82b085;
+}
+button[type="submit"]{
+  text-decoration: none;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: helvetica;
+  font-weight: 300;
+  font-size: 25px;
+  font-style: italic;
+  color: #006505;
+  background-color: #62af68;
+  border-radius: 15px;
+  border: 3px double #0a0f0a;
+}
+button[type="submit"]:hover {
+  color: #62af68;
+  background-color: #006505;
+  border: 3px double #82b085;
+}
+
+input[type="text"]{
+  padding: 10px;
+  border-radius: 30px;
+  font-family: helvetica;
+  font-size: 16px;
+  font-style: italic;
+  }
 
 
