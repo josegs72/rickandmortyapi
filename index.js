@@ -2,41 +2,7 @@ const book$$ = document.querySelector(".book");
 const formulario$$ = document.querySelector(".formulario");
 const input$$ = document.querySelector("input");
 
-//Buscar personajes//
-
-const buscar = (event) => {
-  event.preventDefault();
-  console.log(input$$.value);
-  console.log("buscar", event.target);
-  const url = `https://rickandmortyapi.com/api/character/?name=${input$$.value}`;
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      book$$.innerHTML = "";
-      data.results.forEach((personaje) => {
-        const card = document.createElement("div");
-        card.classList.add("card");
-        card.innerHTML = `
-        <div class="character">
-        <h3 class="name1">${personaje.name}</h3>
-        <p class="species1">${personaje.species},${personaje.gender}</p>
-        <p class="status1">${personaje.status}</p>
-        <img class = "image" src="${personaje.image}" alt="${personaje.name}" />
-    </div>  `;
-        book$$.appendChild(card);
-      
-//RESETEO FORMULARIO//
-        formulario$$.reset();
-
-      
- });
-    });
-};
-
- formulario$$.addEventListener("submit", buscar);
-
-//personajes//
+//PERSONAJES//
 
 function pers(characters) {
   console.log("MIS PERSONAJES", characters);
@@ -73,6 +39,41 @@ fetch(
 )
   .then((response) => response.json())
   .then((characters) => pers(characters));
+
+  //BUSCAR PERSONAJES//
+
+const buscar = (event) => {
+  event.preventDefault();
+ // console.log(input$$.value);
+ // console.log("buscar", event.target);
+  const url = `https://rickandmortyapi.com/api/character/?name=${input$$.value}`;
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+ //     console.log(data);
+      book$$.innerHTML = "";
+      data.results.forEach((personaje) => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `
+        <div class="character">
+        <h3 class="name1">${personaje.name}</h3>
+        <p class="species1">${personaje.species},${personaje.gender}</p>
+        <p class="status1">${personaje.status}</p>
+        <img class = "image" src="${personaje.image}" alt="${personaje.name}" />
+    </div>  `;
+        book$$.appendChild(card);
+      
+//RESETEO FORMULARIO//
+
+        formulario$$.reset();
+
+      
+ });
+    });
+};
+
+ formulario$$.addEventListener("submit", buscar);
 
 
 
